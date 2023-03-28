@@ -122,7 +122,7 @@ def train(model:nn.Sequential, dataloader:torch.utils.data.DataLoader, optimizer
         train_losses.append(loss.item())
         train_scores.append(acc)
 
-        if (i + 1) % config.log_interval == 0:
+        if (i + 1) % config.log_interval == 000:
             print('[Epoch %3d]Training %3d of %3d: acc = %.2f, loss = %.2f' % (epoch, i + 1, len(dataloader), acc, loss.item()))
 
     return train_losses, train_scores
